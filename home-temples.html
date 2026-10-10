@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Marble Temples | Gurukrupa Marble Arts</title>
+
+    <meta name="description" content="Explore handcrafted marble home temples and custom mandirs created with traditional craftsmanship by Gurukrupa Marble Arts.">
+    <meta name="keywords" content="home marble temple, marble mandir, white marble temple, residential mandir, custom temple design">
+    <meta name="author" content="Gurukrupa Marble Arts">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .image-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px 8%;
+        }
+
+        .image-gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image-gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">GURUKRUPA MARBLE ARTS</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Work</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- PAGE INTRO -->
+    <section class="projects-intro">
+        <h1>HOME MARBLE TEMPLES</h1>
+        <p>Custom marble home temples and mandirs crafted with divine proportion, elegance, and traditional architectural aesthetics.</p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <div class="image-gallery-grid">
+        <img src="images/home-temples/home-temple-1.jpeg" alt="Home Marble Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-2.jpeg" alt="Residential Marble Mandir" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-3.jpeg" alt="Custom Marble Mandir Design" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-4.jpeg" alt="White Marble Home Mandir" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-5.jpeg" alt="Architectural Marble Mandir" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-6.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-7.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-8.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-9.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-10.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/home-temples/home-temple-11.jpeg" alt="Bespoke Marble Home Temple" loading="lazy" onclick="openLightbox(this.src)">
+
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>WANT A CUSTOM HOME TEMPLE?</h2>
+        <p>Share your required dimensions and references with us to start your project.</p>
+        <a href="contact.html">
+            <button>DISCUSS YOUR TEMPLE</button>
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Gurukrupa Marble Arts. All Rights Reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Enlarged View">
+</div>
+
+<script>
+function openLightbox(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = image;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<a href="https://wa.me/4917661437347" class="whatsapp" target="_blank" rel="noopener">
+    Discuss Your Project
+</a>
+
+</body>
+</html>

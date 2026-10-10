@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marble Artistry | Gurukrupa Marble Arts</title>
+
+    <meta name="description" content="Explore bespoke artistic marble creations, stone carvings, and decorative marble masterpieces by Gurukrupa Marble Arts.">
+    <meta name="keywords" content="marble artistry, artistic stone carving, bespoke marble decor, custom stone art">
+    <meta name="author" content="Gurukrupa Marble Arts">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .image-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px 8%;
+        }
+
+        .image-gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image-gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">GURUKRUPA MARBLE ARTS</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Work</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- PAGE INTRO -->
+    <section class="projects-intro">
+        <h1>MARBLE ARTISTRY</h1>
+        <p>Explore unique decorative marble artworks, custom artistic sculptures, and handcrafted stone details.</p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <div class="image-gallery-grid">
+        <img src="images/marble-artistry/marble-01.jpg" alt="Marble Artistry Piece" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/marble-artistry/marble-02.jpg" alt="Decorative Marble Carving" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/marble-artistry/marble-03.jpg" alt="Artistic Stone Sculpture" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/marble-artistry/marble-04.jpg" alt="Custom Marble Artwork" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/marble-artistry/marble-05.jpg" alt="Bespoke Stone Craftsmanship" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/marble-artistry/marble-06.jpg" alt="Intricate Marble Inlay & Carving" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>LOOKING FOR A UNIQUE MARBLE ARTWORK?</h2>
+        <p>Contact us to collaborate on bespoke marble designs and custom artistic concepts.</p>
+        <a href="contact.html">
+            <button>DISCUSS YOUR PROJECT</button>
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Gurukrupa Marble Arts. All Rights Reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Enlarged View">
+</div>
+
+<script>
+function openLightbox(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = image;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<a href="https://wa.me/4917661437347" class="whatsapp" target="_blank" rel="noopener">
+    Discuss Your Project
+</a>
+
+</body>
+</html>

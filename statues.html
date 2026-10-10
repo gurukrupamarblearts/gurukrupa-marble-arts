@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marble Statues & Murtis | Gurukrupa Marble Arts</title>
+
+    <meta name="description" content="Explore handcrafted marble statues and divine murtis created by Gurukrupa Marble Arts.">
+    <meta name="keywords" content="marble statues, marble murtis, divine murtis, handcrafted sculptures">
+    <meta name="author" content="Gurukrupa Marble Arts">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .subcategory-section {
+            padding: 30px 8%;
+        }
+
+        .subcategory-title {
+            color: #c9a15b;
+            font-size: 26px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #c9a15b;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .image-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .image-gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image-gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">GURUKRUPA MARBLE ARTS</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Work</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- PAGE INTRO -->
+    <section class="projects-intro">
+        <h1>MARBLE STATUES & MURTIS</h1>
+        <p>Explore handcrafted divine murtis and artistic marble sculptures in our pure image gallery.</p>
+    </section>
+
+    <!-- SUBCATEGORY 1: MARBLE MURTIS -->
+    <section class="subcategory-section">
+        <h2 class="subcategory-title">Marble Murtis</h2>
+        <div class="image-gallery-grid">
+            <img src="images/statues/statue-03.jpg" alt="Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-05.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-07.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-08.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-09.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-10.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-11.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-12.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-13.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-14.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-15.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-16.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-17.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-18.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-19.jpg" alt="Divine Marble Murti" loading="lazy" onclick="openLightbox(this.src)">
+
+        </div>
+    </section>
+
+    <!-- SUBCATEGORY 2: MARBLE STATUES -->
+    <section class="subcategory-section">
+        <h2 class="subcategory-title">Marble Statues</h2>
+        <div class="image-gallery-grid">
+            <img src="images/statues/statue-01.jpg" alt="Marble Statue" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-02.jpg" alt="Handcrafted Marble Statue" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-04.jpg" alt="Figurative Sculpture" loading="lazy" onclick="openLightbox(this.src)">
+            <img src="images/statues/statue-06.jpg" alt="Custom Marble Statue" loading="lazy" onclick="openLightbox(this.src)">
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>HAVE A STATUE OR MURTI IN MIND?</h2>
+        <p>Share your reference image or drawing with us and let's discuss your custom marble piece.</p>
+        <a href="contact.html">
+            <button>DISCUSS YOUR PROJECT</button>
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Gurukrupa Marble Arts. All Rights Reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Enlarged View">
+</div>
+
+<script>
+function openLightbox(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = image;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<a href="https://wa.me/4917661437347" class="whatsapp" target="_blank" rel="noopener">
+    Discuss Your Project
+</a>
+
+</body>
+</html>

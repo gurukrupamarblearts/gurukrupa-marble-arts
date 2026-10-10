@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CNC Marble Work | Gurukrupa Marble Arts</title>
+
+    <meta name="description" content="Explore precision CNC marble carving, 2D & 3D marble jali screens, and carved wall panels by Gurukrupa Marble Arts.">
+    <meta name="keywords" content="CNC marble carving, marble jali, 3D marble carving, stone CNC work, marble wall panels">
+    <meta name="author" content="Gurukrupa Marble Arts">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .image-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px 8%;
+        }
+
+        .image-gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .image-gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.95;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">GURUKRUPA MARBLE ARTS</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Our Work</a>
+        <a href="index.html#process">Our Process</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- PAGE INTRO -->
+    <section class="projects-intro">
+        <h1>CNC MARBLE WORK</h1>
+        <p>Explore high-precision 2D and 3D CNC marble carvings, jali screens, decorative panels, and architectural relief work.</p>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <div class="image-gallery-grid">
+        <img src="images/cnc/cnc-01.jpg" alt="CNC Marble Work" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/cnc/cnc-02.jpg" alt="3D CNC Carved Marble Panel" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/cnc/cnc-03.jpg" alt="Marble Jali Design" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/cnc/cnc-04.jpg" alt="CNC Wall Relief Panel" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/cnc/cnc-05.jpg" alt="Precision Marble Carving" loading="lazy" onclick="openLightbox(this.src)">
+        <img src="images/cnc/cnc-06.jpg" alt="Custom Architectural CNC Panel" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>REQUIRE PRECISION CNC MARBLE WORK?</h2>
+        <p>Share your vector files, CAD drawings, or concepts with our engineering team.</p>
+        <a href="contact.html">
+            <button>DISCUSS YOUR PROJECT</button>
+        </a>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Gurukrupa Marble Arts. All Rights Reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" alt="Enlarged View">
+</div>
+
+<script>
+function openLightbox(image) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = image;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<a href="https://wa.me/4917661437347" class="whatsapp" target="_blank" rel="noopener">
+    Discuss Your Project
+</a>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Temple Projects | Gurukrupa Marble Arts</title>
+
+    <meta name="description"
+        content="Explore large scale architectural marble temple projects and site installations by Gurukrupa Marble Arts.">
+
+    <meta name="keywords"
+        content="marble temple projects, temple construction, large marble temples, architectural stone work">
+
+    <meta name="author" content="Gurukrupa Marble Arts">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ================================
+           TEMPLE PROJECTS IMAGE GALLERY
+           ================================ */
+
+        .image-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+
+            width: 100%;
+            max-width: 1050px;
+
+            margin: 30px auto;
+            padding: 0 20px;
+
+            box-sizing: border-box;
+        }
+
+        .image-gallery-grid img {
+            display: block;
+
+            width: 100%;
+            height: 210px;
+
+            object-fit: cover;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                opacity 0.3s ease;
+        }
+
+        .image-gallery-grid img:hover {
+            transform: scale(1.02);
+            opacity: 0.92;
+        }
+
+
+        /* ================================
+           TABLET
+           ================================ */
+
+        @media (max-width: 768px) {
+
+            .image-gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 14px;
+
+                padding: 0 15px;
+            }
+
+            .image-gallery-grid img {
+                height: 180px;
+            }
+        }
+
+
+        /* ================================
+           MOBILE
+           ================================ */
+
+        @media (max-width: 480px) {
+
+            .image-gallery-grid {
+                grid-template-columns: 1fr;
+
+                max-width: 420px;
+
+                padding: 0 15px;
+            }
+
+            .image-gallery-grid img {
+                height: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- ================================
+         NAVIGATION
+         ================================ -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                GURUKRUPA
+                <span>MARBLE ARTS</span>
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="products.html">Our Work</a>
+
+                <a href="index.html#process">Our Process</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================================
+         MAIN CONTENT
+         ================================ -->
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <section class="projects-intro">
+
+            <h1>TEMPLE PROJECTS</h1>
+
+            <p>
+                Explore our architectural marble temple construction,
+                large-scale site installations, and custom sanctuary projects.
+            </p>
+
+        </section>
+
+
+        <!-- ================================
+             TEMPLE PROJECT IMAGE GALLERY
+             ================================ -->
+
+        <div class="image-gallery-grid">
+
+            <img
+                src="images/temple-projects/temple-01.jpg"
+                alt="Marble Temple Project 1"
+                onclick="openLightbox(this.src)"
+            >
+
+            <img
+                src="images/temple-projects/temple-02.jpg"
+                alt="Marble Temple Project 2"
+                onclick="openLightbox(this.src)"
+            >
+
+            <img
+                src="images/temple-projects/temple-03.jpg"
+                alt="Marble Temple Project 3"
+                onclick="openLightbox(this.src)"
+            >
+
+            <img
+                src="images/temple-projects/temple-04.jpg"
+                alt="Marble Temple Project 4"
+                onclick="openLightbox(this.src)"
+            >
+
+            <img
+                src="images/temple-projects/temple-05.jpg"
+                alt="Marble Temple Project 5"
+                onclick="openLightbox(this.src)"
+            >
+
+            <img
+                src="images/temple-projects/temple-06.jpg"
+                alt="Marble Temple Project 6"
+                onclick="openLightbox(this.src)"
+            >
+
+        </div>
+
+
+        <!-- ================================
+             CALL TO ACTION
+             ================================ -->
+
+        <section class="cta">
+
+            <h2>Have a Temple Project in Mind?</h2>
+
+            <p>
+                Share your vision with us and let our craftsmen
+                create a timeless marble temple for you.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Discuss Your Project
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         FOOTER
+         ================================ -->
+
+    <footer>
+
+        <p>
+            © 2026 Gurukrupa Marble Arts.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================================
+         LIGHTBOX
+         ================================ -->
+
+    <div
+        id="lightbox"
+        class="lightbox"
+        onclick="closeLightbox()"
+    >
+
+        <img
+            id="lightbox-img"
+            alt="Enlarged View"
+        >
+
+    </div>
+
+
+    <!-- ================================
+         LIGHTBOX JAVASCRIPT
+         ================================ -->
+
+    <script>
+
+        function openLightbox(src) {
+
+            document.getElementById("lightbox-img").src = src;
+
+            document.getElementById("lightbox").style.display = "flex";
+
+        }
+
+
+        function closeLightbox() {
+
+            document.getElementById("lightbox").style.display = "none";
+
+        }
+
+    </script>
+
+
+    <!-- ================================
+         WHATSAPP BUTTON
+         ================================ -->
+
+    <a
+        href="https://wa.me/4917661437347"
+        class="whatsapp"
+        target="_blank"
+        rel="noopener"
+    >
+        Discuss Your Project
+    </a>
+
+</body>
+
+</html>
