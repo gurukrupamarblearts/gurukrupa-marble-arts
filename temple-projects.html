@@ -23,18 +23,146 @@
     <style>
 
         /* =====================================================
-           TEMPLE PROJECT PAGE
+           TEMPLE PROJECTS - NAVIGATION OVERRIDE
            ===================================================== */
 
-        .temple-page {
-            width: 100%;
-            margin: 0;
-            padding: 0;
+        nav.navbar {
+            width: 100% !important;
+            min-height: 85px !important;
+
+            display: block !important;
+
+            background: #ffffff !important;
+
+            padding: 18px 8% !important;
+
+            border-bottom: 1px solid #e5e5e5 !important;
+
+            position: relative !important;
+
+            z-index: 1000 !important;
+        }
+
+
+        nav.navbar .nav-container {
+            width: 100% !important;
+            max-width: none !important;
+
+            height: 49px !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            display: flex !important;
+
+            flex-direction: row !important;
+
+            align-items: center !important;
+
+            justify-content: space-between !important;
+
+            gap: 30px !important;
+        }
+
+
+        nav.navbar .logo {
+            display: flex !important;
+
+            flex-direction: column !important;
+
+            align-items: flex-start !important;
+
+            justify-content: center !important;
+
+            flex-shrink: 0 !important;
+
+            margin: 0 !important;
+            padding: 0 !important;
+
+            color: #8f6d35 !important;
+
+            text-decoration: none !important;
+
+            font-size: 24px !important;
+
+            font-weight: bold !important;
+
+            line-height: 1.1 !important;
+
+            letter-spacing: 1px !important;
+
+            white-space: nowrap !important;
+        }
+
+
+        nav.navbar .logo span {
+            display: block !important;
+
+            margin: 3px 0 0 0 !important;
+
+            padding: 0 !important;
+
+            font-size: 13px !important;
+
+            letter-spacing: 3px !important;
+        }
+
+
+        nav.navbar .nav-links {
+            width: auto !important;
+
+            display: flex !important;
+
+            flex-direction: row !important;
+
+            align-items: center !important;
+
+            justify-content: flex-end !important;
+
+            flex-wrap: nowrap !important;
+
+            gap: 28px !important;
+
+            margin: 0 0 0 auto !important;
+
+            padding: 0 !important;
+
+            flex-shrink: 0 !important;
+        }
+
+
+        nav.navbar .nav-links a {
+            display: inline-block !important;
+
+            width: auto !important;
+
+            margin: 0 !important;
+
+            padding: 5px 0 !important;
+
+            border: none !important;
+
+            color: #333333 !important;
+
+            background: transparent !important;
+
+            text-decoration: none !important;
+
+            font-size: 16px !important;
+
+            line-height: 1.4 !important;
+
+            white-space: nowrap !important;
+        }
+
+
+        nav.navbar .nav-links a:hover {
+            color: #8f6d35 !important;
         }
 
 
         /* =====================================================
-           PAGE INTRO
+           TEMPLE PAGE INTRO
            ===================================================== */
 
         .temple-intro {
@@ -47,6 +175,7 @@
             padding: 80px 8% 60px;
         }
 
+
         .temple-intro h1 {
             color: #8f6d35;
 
@@ -54,8 +183,9 @@
 
             line-height: 1.2;
 
-            margin-bottom: 20px;
+            margin: 0 0 20px;
         }
+
 
         .temple-intro p {
             max-width: 850px;
@@ -69,7 +199,7 @@
 
 
         /* =====================================================
-           GALLERY
+           TEMPLE GALLERY
            ===================================================== */
 
         .temple-gallery {
@@ -90,10 +220,6 @@
         }
 
 
-        /* =====================================================
-           GALLERY CARD
-           ===================================================== */
-
         .temple-card {
             width: 100%;
 
@@ -113,6 +239,7 @@
                 box-shadow 0.3s ease;
         }
 
+
         .temple-card:hover {
             transform: translateY(-5px);
 
@@ -120,10 +247,6 @@
                 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
-
-        /* =====================================================
-           GALLERY IMAGE
-           ===================================================== */
 
         .temple-card img {
             display: block;
@@ -138,6 +261,7 @@
                 transform 0.4s ease,
                 filter 0.4s ease;
         }
+
 
         .temple-card:hover img {
             transform: scale(1.04);
@@ -166,12 +290,14 @@
             z-index: 9999;
 
             align-items: center;
+
             justify-content: center;
 
             padding: 25px;
 
             cursor: pointer;
         }
+
 
         #temple-lightbox img {
             display: block;
@@ -192,10 +318,6 @@
         }
 
 
-        /* =====================================================
-           LIGHTBOX CLOSE BUTTON
-           ===================================================== */
-
         .lightbox-close {
             position: absolute;
 
@@ -205,16 +327,17 @@
 
             color: #fff;
 
+            font-family: Arial, sans-serif;
+
             font-size: 42px;
 
             line-height: 1;
-
-            font-family: Arial, sans-serif;
 
             cursor: pointer;
 
             z-index: 10000;
         }
+
 
         .lightbox-close:hover {
             color: #c9a15b;
@@ -222,34 +345,62 @@
 
 
         /* =====================================================
+           DESKTOP GUARANTEE
+           ===================================================== */
+
+        @media (min-width: 769px) {
+
+            nav.navbar .nav-container {
+                display: flex !important;
+
+                flex-direction: row !important;
+
+                align-items: center !important;
+
+                justify-content: space-between !important;
+            }
+
+            nav.navbar .nav-links {
+                display: flex !important;
+
+                flex-direction: row !important;
+
+                align-items: center !important;
+
+                justify-content: flex-end !important;
+
+                width: auto !important;
+
+                margin-left: auto !important;
+            }
+
+        }
+
+
+        /* =====================================================
            TABLET
            ===================================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 900px) and (min-width: 769px) {
 
-            .temple-intro {
-                padding:
-                    70px 6% 50px;
+            nav.navbar {
+                padding-left: 5% !important;
+                padding-right: 5% !important;
             }
 
-            .temple-intro h1 {
-                font-size: 40px;
+            nav.navbar .nav-links {
+                gap: 18px !important;
+            }
+
+            nav.navbar .nav-links a {
+                font-size: 15px !important;
             }
 
             .temple-gallery {
-
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
-
-                gap: 20px;
-
-                padding:
-                    40px 20px 60px;
             }
 
-            .temple-card img {
-                height: 250px;
-            }
         }
 
 
@@ -257,45 +408,122 @@
            MOBILE
            ===================================================== */
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+
+            nav.navbar {
+                min-height: auto !important;
+
+                padding: 22px 20px !important;
+            }
+
+
+            nav.navbar .nav-container {
+                width: 100% !important;
+
+                height: auto !important;
+
+                display: flex !important;
+
+                flex-direction: column !important;
+
+                align-items: center !important;
+
+                justify-content: center !important;
+
+                gap: 18px !important;
+            }
+
+
+            nav.navbar .logo {
+                align-items: center !important;
+
+                text-align: center !important;
+
+                font-size: 21px !important;
+
+                white-space: normal !important;
+            }
+
+
+            nav.navbar .logo span {
+                font-size: 12px !important;
+            }
+
+
+            nav.navbar .nav-links {
+                width: 100% !important;
+
+                display: grid !important;
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr)) !important;
+
+                gap: 10px !important;
+
+                margin: 0 !important;
+            }
+
+
+            nav.navbar .nav-links a {
+                width: 100% !important;
+
+                text-align: center !important;
+
+                padding: 8px 4px !important;
+
+                border-bottom: 1px solid #eee !important;
+
+                white-space: normal !important;
+            }
+
 
             .temple-intro {
-                padding:
-                    55px 6% 40px;
+                padding: 60px 6% 45px;
             }
+
 
             .temple-intro h1 {
-                font-size: 34px;
+                font-size: 38px;
             }
 
-            .temple-intro p {
-                font-size: 17px;
-            }
 
             .temple-gallery {
-
                 grid-template-columns: 1fr;
 
                 max-width: 500px;
 
                 padding:
-                    30px 15px 50px;
+                    30px 15px 60px;
             }
+
 
             .temple-card img {
                 height: 270px;
             }
 
-            #temple-lightbox img {
-                max-width: 96%;
-                max-height: 82vh;
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 480px) {
+
+            nav.navbar .nav-links {
+                grid-template-columns: 1fr !important;
             }
 
-            .lightbox-close {
-                top: 15px;
-                right: 20px;
-                font-size: 36px;
+
+            .temple-intro h1 {
+                font-size: 32px;
             }
+
+
+            .temple-card img {
+                height: 250px;
+            }
+
         }
 
     </style>
@@ -313,6 +541,7 @@
     <nav class="navbar">
 
         <div class="nav-container">
+
 
             <a href="index.html" class="logo">
 
@@ -347,6 +576,7 @@
 
             </div>
 
+
         </div>
 
     </nav>
@@ -354,15 +584,11 @@
 
 
     <!-- =====================================================
-         MAIN CONTENT
+         MAIN
          ===================================================== -->
 
-    <main class="temple-page">
+    <main>
 
-
-        <!-- =================================================
-             INTRODUCTION
-             ================================================= -->
 
         <section class="temple-intro">
 
@@ -380,13 +606,11 @@
 
 
         <!-- =================================================
-             TEMPLE PROJECT GALLERY
+             GALLERY
              ================================================= -->
 
         <div class="temple-gallery">
 
-
-            <!-- TEMPLE 01 -->
 
             <div
                 class="temple-card"
@@ -400,9 +624,6 @@
             </div>
 
 
-
-            <!-- TEMPLE 02 -->
-
             <div
                 class="temple-card"
                 onclick="openTempleLightbox('images/temple-projects/temple-02.jpg')">
@@ -414,9 +635,6 @@
 
             </div>
 
-
-
-            <!-- TEMPLE 03 -->
 
             <div
                 class="temple-card"
@@ -430,9 +648,6 @@
             </div>
 
 
-
-            <!-- TEMPLE 04 -->
-
             <div
                 class="temple-card"
                 onclick="openTempleLightbox('images/temple-projects/temple-04.jpg')">
@@ -445,9 +660,6 @@
             </div>
 
 
-
-            <!-- TEMPLE 05 -->
-
             <div
                 class="temple-card"
                 onclick="openTempleLightbox('images/temple-projects/temple-05.jpg')">
@@ -459,9 +671,6 @@
 
             </div>
 
-
-
-            <!-- TEMPLE 06 -->
 
             <div
                 class="temple-card"
@@ -516,12 +725,13 @@
             src=""
             alt="Enlarged Marble Temple Project">
 
+
     </div>
 
 
 
     <!-- =====================================================
-         WHATSAPP BUTTON
+         WHATSAPP
          ===================================================== -->
 
     <a
@@ -544,10 +754,10 @@
 
         function openTempleLightbox(imageSrc) {
 
-            var lightbox =
+            const lightbox =
                 document.getElementById("temple-lightbox");
 
-            var image =
+            const image =
                 document.getElementById("temple-lightbox-img");
 
 
@@ -559,20 +769,17 @@
         }
 
 
-
         function closeTempleLightbox(event) {
 
             if (event) {
-
                 event.stopPropagation();
-
             }
 
 
-            var lightbox =
+            const lightbox =
                 document.getElementById("temple-lightbox");
 
-            var image =
+            const image =
                 document.getElementById("temple-lightbox-img");
 
 
@@ -582,7 +789,6 @@
 
             document.body.style.overflow = "";
         }
-
 
 
         document.addEventListener(
@@ -601,9 +807,6 @@
     </script>
 
 
-</body>
-
-</html>
 </body>
 
 </html>
