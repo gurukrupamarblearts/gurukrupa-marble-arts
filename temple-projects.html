@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Temple Projects | Gurukrupa Marble Arts</title>
@@ -17,85 +19,285 @@
 
     <link rel="stylesheet" href="style.css">
 
+
     <style>
-        /* ================================
-           TEMPLE PROJECTS IMAGE GALLERY
-           ================================ */
 
-        .image-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 18px;
+        /* =====================================================
+           TEMPLE PROJECT PAGE
+           ===================================================== */
 
+        .temple-page {
             width: 100%;
-            max-width: 1050px;
-
-            margin: 30px auto;
-            padding: 0 20px;
-
-            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        .image-gallery-grid img {
-            display: block;
 
+        /* =====================================================
+           PAGE INTRO
+           ===================================================== */
+
+        .temple-intro {
             width: 100%;
-            height: 210px;
 
-            object-fit: cover;
+            background: #faf8f3;
 
-            border-radius: 6px;
+            text-align: center;
+
+            padding: 80px 8% 60px;
+        }
+
+        .temple-intro h1 {
+            color: #8f6d35;
+
+            font-size: 45px;
+
+            line-height: 1.2;
+
+            margin-bottom: 20px;
+        }
+
+        .temple-intro p {
+            max-width: 850px;
+
+            margin: 0 auto;
+
+            font-size: 18px;
+
+            color: #333;
+        }
+
+
+        /* =====================================================
+           GALLERY
+           ===================================================== */
+
+        .temple-gallery {
+            width: 100%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 50px 20px 80px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        /* =====================================================
+           GALLERY CARD
+           ===================================================== */
+
+        .temple-card {
+            width: 100%;
+
+            background: #fff;
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0, 0, 0, 0.08);
 
             cursor: pointer;
 
             transition:
                 transform 0.3s ease,
-                opacity 0.3s ease;
+                box-shadow 0.3s ease;
         }
 
-        .image-gallery-grid img:hover {
-            transform: scale(1.02);
-            opacity: 0.92;
+        .temple-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
 
-        /* ================================
+        /* =====================================================
+           GALLERY IMAGE
+           ===================================================== */
+
+        .temple-card img {
+            display: block;
+
+            width: 100%;
+
+            height: 280px;
+
+            object-fit: cover;
+
+            transition:
+                transform 0.4s ease,
+                filter 0.4s ease;
+        }
+
+        .temple-card:hover img {
+            transform: scale(1.04);
+
+            filter: brightness(0.94);
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+           ===================================================== */
+
+        #temple-lightbox {
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.94);
+
+            z-index: 9999;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 25px;
+
+            cursor: pointer;
+        }
+
+        #temple-lightbox img {
+            display: block;
+
+            max-width: 92%;
+
+            max-height: 90vh;
+
+            width: auto;
+
+            height: auto;
+
+            object-fit: contain;
+
+            border: 2px solid #c9a15b;
+
+            border-radius: 4px;
+        }
+
+
+        /* =====================================================
+           LIGHTBOX CLOSE BUTTON
+           ===================================================== */
+
+        .lightbox-close {
+            position: absolute;
+
+            top: 20px;
+
+            right: 30px;
+
+            color: #fff;
+
+            font-size: 42px;
+
+            line-height: 1;
+
+            font-family: Arial, sans-serif;
+
+            cursor: pointer;
+
+            z-index: 10000;
+        }
+
+        .lightbox-close:hover {
+            color: #c9a15b;
+        }
+
+
+        /* =====================================================
            TABLET
-           ================================ */
+           ===================================================== */
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
 
-            .image-gallery-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 14px;
-
-                padding: 0 15px;
+            .temple-intro {
+                padding:
+                    70px 6% 50px;
             }
 
-            .image-gallery-grid img {
-                height: 180px;
+            .temple-intro h1 {
+                font-size: 40px;
+            }
+
+            .temple-gallery {
+
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+
+                gap: 20px;
+
+                padding:
+                    40px 20px 60px;
+            }
+
+            .temple-card img {
+                height: 250px;
             }
         }
 
 
-        /* ================================
+        /* =====================================================
            MOBILE
-           ================================ */
+           ===================================================== */
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
 
-            .image-gallery-grid {
+            .temple-intro {
+                padding:
+                    55px 6% 40px;
+            }
+
+            .temple-intro h1 {
+                font-size: 34px;
+            }
+
+            .temple-intro p {
+                font-size: 17px;
+            }
+
+            .temple-gallery {
+
                 grid-template-columns: 1fr;
 
-                max-width: 420px;
+                max-width: 500px;
 
-                padding: 0 15px;
+                padding:
+                    30px 15px 50px;
             }
 
-            .image-gallery-grid img {
-                height: 200px;
+            .temple-card img {
+                height: 270px;
+            }
+
+            #temple-lightbox img {
+                max-width: 96%;
+                max-height: 82vh;
+            }
+
+            .lightbox-close {
+                top: 15px;
+                right: 20px;
+                font-size: 36px;
             }
         }
+
     </style>
 
 </head>
@@ -103,30 +305,45 @@
 
 <body>
 
-    <!-- ================================
+
+    <!-- =====================================================
          NAVIGATION
-         ================================ -->
+         ===================================================== -->
 
     <nav class="navbar">
 
         <div class="nav-container">
 
             <a href="index.html" class="logo">
+
                 GURUKRUPA
+
                 <span>MARBLE ARTS</span>
+
             </a>
+
 
             <div class="nav-links">
 
-                <a href="index.html">Home</a>
+                <a href="index.html">
+                    Home
+                </a>
 
-                <a href="about.html">About Us</a>
+                <a href="about.html">
+                    About Us
+                </a>
 
-                <a href="products.html">Our Work</a>
+                <a href="products.html">
+                    Our Work
+                </a>
 
-                <a href="index.html#process">Our Process</a>
+                <a href="index.html#process">
+                    Our Process
+                </a>
 
-                <a href="contact.html">Contact</a>
+                <a href="contact.html">
+                    Contact
+                </a>
 
             </div>
 
@@ -135,17 +352,23 @@
     </nav>
 
 
-    <!-- ================================
+
+    <!-- =====================================================
          MAIN CONTENT
-         ================================ -->
+         ===================================================== -->
 
-    <main>
+    <main class="temple-page">
 
-        <!-- INTRODUCTION -->
 
-        <section class="projects-intro">
+        <!-- =================================================
+             INTRODUCTION
+             ================================================= -->
 
-            <h1>TEMPLE PROJECTS</h1>
+        <section class="temple-intro">
+
+            <h1>
+                TEMPLE PROJECTS
+            </h1>
 
             <p>
                 Explore our architectural marble temple construction,
@@ -155,142 +378,232 @@
         </section>
 
 
-        <!-- ================================
-             TEMPLE PROJECT IMAGE GALLERY
-             ================================ -->
 
-        <div class="image-gallery-grid">
+        <!-- =================================================
+             TEMPLE PROJECT GALLERY
+             ================================================= -->
 
-            <img
-                src="images/temple-projects/temple-01.jpg"
-                alt="Marble Temple Project 1"
-                onclick="openLightbox(this.src)"
-            >
+        <div class="temple-gallery">
 
-            <img
-                src="images/temple-projects/temple-02.jpg"
-                alt="Marble Temple Project 2"
-                onclick="openLightbox(this.src)"
-            >
 
-            <img
-                src="images/temple-projects/temple-03.jpg"
-                alt="Marble Temple Project 3"
-                onclick="openLightbox(this.src)"
-            >
+            <!-- TEMPLE 01 -->
 
-            <img
-                src="images/temple-projects/temple-04.jpg"
-                alt="Marble Temple Project 4"
-                onclick="openLightbox(this.src)"
-            >
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-01.jpg')">
 
-            <img
-                src="images/temple-projects/temple-05.jpg"
-                alt="Marble Temple Project 5"
-                onclick="openLightbox(this.src)"
-            >
+                <img
+                    src="images/temple-projects/temple-01.jpg"
+                    alt="Marble Temple Project 1"
+                    loading="lazy">
 
-            <img
-                src="images/temple-projects/temple-06.jpg"
-                alt="Marble Temple Project 6"
-                onclick="openLightbox(this.src)"
-            >
+            </div>
+
+
+
+            <!-- TEMPLE 02 -->
+
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-02.jpg')">
+
+                <img
+                    src="images/temple-projects/temple-02.jpg"
+                    alt="Marble Temple Project 2"
+                    loading="lazy">
+
+            </div>
+
+
+
+            <!-- TEMPLE 03 -->
+
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-03.jpg')">
+
+                <img
+                    src="images/temple-projects/temple-03.jpg"
+                    alt="Marble Temple Project 3"
+                    loading="lazy">
+
+            </div>
+
+
+
+            <!-- TEMPLE 04 -->
+
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-04.jpg')">
+
+                <img
+                    src="images/temple-projects/temple-04.jpg"
+                    alt="Marble Temple Project 4"
+                    loading="lazy">
+
+            </div>
+
+
+
+            <!-- TEMPLE 05 -->
+
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-05.jpg')">
+
+                <img
+                    src="images/temple-projects/temple-05.jpg"
+                    alt="Marble Temple Project 5"
+                    loading="lazy">
+
+            </div>
+
+
+
+            <!-- TEMPLE 06 -->
+
+            <div
+                class="temple-card"
+                onclick="openTempleLightbox('images/temple-projects/temple-06.jpg')">
+
+                <img
+                    src="images/temple-projects/temple-06.jpg"
+                    alt="Marble Temple Project 6"
+                    loading="lazy">
+
+            </div>
+
 
         </div>
-
-
-        <!-- ================================
-             CALL TO ACTION
-             ================================ -->
-
-        <section class="cta">
-
-            <h2>Have a Temple Project in Mind?</h2>
-
-            <p>
-                Share your vision with us and let our craftsmen
-                create a timeless marble temple for you.
-            </p>
-
-            <a href="contact.html" class="btn">
-                Discuss Your Project
-            </a>
-
-        </section>
 
     </main>
 
 
-    <!-- ================================
+
+    <!-- =====================================================
          FOOTER
-         ================================ -->
+         ===================================================== -->
 
     <footer>
 
         <p>
-            © 2026 Gurukrupa Marble Arts.
-            All Rights Reserved.
+            © 2026 Gurukrupa Marble Arts. All Rights Reserved.
         </p>
 
     </footer>
 
 
-    <!-- ================================
+
+    <!-- =====================================================
          LIGHTBOX
-         ================================ -->
+         ===================================================== -->
 
     <div
-        id="lightbox"
-        class="lightbox"
-        onclick="closeLightbox()"
-    >
+        id="temple-lightbox"
+        onclick="closeTempleLightbox()">
+
+
+        <span
+            class="lightbox-close"
+            onclick="closeTempleLightbox(event)">
+            &times;
+        </span>
+
 
         <img
-            id="lightbox-img"
-            alt="Enlarged View"
-        >
+            id="temple-lightbox-img"
+            src=""
+            alt="Enlarged Marble Temple Project">
 
     </div>
 
 
-    <!-- ================================
-         LIGHTBOX JAVASCRIPT
-         ================================ -->
 
-    <script>
-
-        function openLightbox(src) {
-
-            document.getElementById("lightbox-img").src = src;
-
-            document.getElementById("lightbox").style.display = "flex";
-
-        }
-
-
-        function closeLightbox() {
-
-            document.getElementById("lightbox").style.display = "none";
-
-        }
-
-    </script>
-
-
-    <!-- ================================
+    <!-- =====================================================
          WHATSAPP BUTTON
-         ================================ -->
+         ===================================================== -->
 
     <a
         href="https://wa.me/4917661437347"
         class="whatsapp"
         target="_blank"
-        rel="noopener"
-    >
+        rel="noopener">
+
         Discuss Your Project
+
     </a>
 
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        function openTempleLightbox(imageSrc) {
+
+            var lightbox =
+                document.getElementById("temple-lightbox");
+
+            var image =
+                document.getElementById("temple-lightbox-img");
+
+
+            image.src = imageSrc;
+
+            lightbox.style.display = "flex";
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+
+        function closeTempleLightbox(event) {
+
+            if (event) {
+
+                event.stopPropagation();
+
+            }
+
+
+            var lightbox =
+                document.getElementById("temple-lightbox");
+
+            var image =
+                document.getElementById("temple-lightbox-img");
+
+
+            lightbox.style.display = "none";
+
+            image.src = "";
+
+            document.body.style.overflow = "";
+        }
+
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    closeTempleLightbox();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
 </body>
 
 </html>
