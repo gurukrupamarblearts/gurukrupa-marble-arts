@@ -37,26 +37,26 @@ textarea {
 }
 
 
-/* =========================================================
+/* =====================================================
    NAVIGATION
-   ========================================================= */
+===================================================== */
 
 nav {
     background: #fff;
     min-height: 85px;
+
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
     padding: 18px 8%;
+
     border-bottom: 1px solid #e5e5e5;
+
+    gap: 30px;
+
     position: relative;
     z-index: 100;
-}
-
-.nav-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
@@ -65,109 +65,39 @@ nav {
     font-weight: bold;
     letter-spacing: 1px;
     white-space: nowrap;
-    text-decoration: none;
-    line-height: 1.2;
-    margin: 0;
 }
 
 .nav-links {
     display: flex;
+    gap: 28px;
     align-items: center;
     justify-content: flex-end;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #333;
     font-size: 16px;
+
     padding: 5px 0;
-    margin: 0;
-    line-height: 1.2;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
-/* =========================================================
-   MOBILE NAVIGATION
-   ========================================================= */
+.nav-links a:hover,
+.nav-links a:focus {
+    color: #8f6d35;
+}
 
-@media (max-width: 768px) {
-
-    nav {
-        min-height: auto;
-
-        padding: 22px 20px;
-    }
-
-    .nav-container {
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        justify-content: center;
-
-        gap: 18px;
-    }
-
-    .logo {
-        font-size: 21px;
-
-        text-align: center;
-
-        white-space: normal;
-
-        align-items: center;
-    }
-
-    .logo span {
-        font-size: 12px;
-    }
-
-    .nav-links {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 10px;
-
-        margin-left: 0;
-
-        flex-wrap: wrap;
-    }
-
-    .nav-links a {
-        text-align: center;
-
-        font-size: 15px;
-
-        padding: 8px 4px;
-
-        white-space: normal;
-
-        border-bottom: 1px solid #eee;
-    }
+.nav-links a:focus-visible {
+    outline: 2px solid #c9a15b;
+    outline-offset: 4px;
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .nav-links {
-        grid-template-columns: 1fr;
-    }
-
-}
 /* =====================================================
    GENERAL SECTIONS
 ===================================================== */
@@ -2060,9 +1990,8 @@ footer a:focus {
 @media (prefers-reduced-motion: reduce) {
 
     html {
-    scroll-behavior: smooth;
-    scrollbar-gutter: stable;
-}
+        scroll-behavior: auto;
+    }
 
     *,
     *::before,
@@ -2073,32 +2002,7 @@ footer a:focus {
     }
 }
 
-/* ==========================================================================
-   VIDEO CONTAINER STYLES
-   ========================================================================== */
-.video-container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 8%;
-    text-align: center;
-}
 
-.video-container video {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid #262626;
-    background-color: #141414;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-.video-caption {
-    color: #c9a15b;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 10px;
-}
 
 /* ==========================================================================
    PORTRAIT VIDEO GRID STYLES
@@ -2150,5 +2054,69 @@ footer a:focus {
     
     .portrait-video-card video {
         max-width: 280px; /* Compact fit on mobile screens */
+    }
+}
+
+
+/* =========================================
+   REFINED CAPABILITIES & PROCESS SECTIONS
+========================================= */
+
+/* Capability and process headings */
+.factory .card h3,
+.process .card h3 {
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+/* Why Gurukrupa cards */
+.why .card {
+    background: #1b1b1b;
+    color: #eeeeee;
+}
+
+.why .card h3 {
+    color: #c9a15b;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.why .card p {
+    color: #eeeeee;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Process descriptions */
+.process .card p {
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Capability descriptions */
+.factory .card p {
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+    .factory .card h3,
+    .process .card h3 {
+        font-size: 19px;
+    }
+
+    .why .card h3 {
+        font-size: 18px;
+    }
+
+    .why .card p {
+        font-size: 15px;
+    }
+
+    .why .card p,
+    .process .card p,
+    .factory .card p {
+        line-height: 1.6;
     }
 }
