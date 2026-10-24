@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gurukrupamarblearts.github.io/gurukrupa-marble-arts/sitemap.xml
+
